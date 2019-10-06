@@ -1,12 +1,19 @@
 Project Proposal #1
 
-Title: Automated pet surveillance
+Automated Pet Surveillance
+Atharva Munshi        
+Kapil Mulchandani  	    
+Namrata Deshmukh           
+Vijay Ghanshani
 
-Project idea Description: The common problem that every dog owner faces is how to take care of their dog pets while they are not home. Most of the times the dogs start showing anxiety issues when they have left home alone and tend to show abnormal behaviors like chewing furniture, continuous barking, etc. The proposed device will help the dog owners to keep an activity track on their pet remotely via webcam and feed them by just clicking a button or setting regular intervals for food dispense. The device will send the notifications to the owner whenever the dog behaves abnormally. Abnormal behaviors like continuous barking can mean several things like a house fire or an intruder in the house. The owner gets a notification on the mobile phone when the dog starts barking and the owner can start webcam to monitor the situation
+A software application that keeps track of the pet’s activities and reports anomalous behavior of the pet to owner via mobile app. 
 
-Goal: A device will be build using a raspberry pi, USB webcam, and sound sensor with the following features:
-    • dispense a treat to dogs via the Android app or set regular intervals for treat dispense.
-    • Barking Alert
-    • Live stream video to monitor the pet
+Abstract:
+The increase in the computational power of computers has made it possible to capture important information, make use of the context and interact directly with the physical object. The IoT provides a set of standards and methodologies to associate an object in the real world. In our project, the proposed device will help the dog owners to keep an activity track on their pet remotely via webcam and feed them by just clicking a button or setting regular intervals for food dispense. It will also send the notifications to the owner whenever the dog behaves abnormally like excessive barking and thus fulfilling the need of the customers by letting owners leave their pets at home without any worries and let them take care of their pet's food requirements while they are not home.
 
-Technology Stack: Android Studio, Raspberry Pi, Qwe
+Architecture Diagram:
+![272 ac dia](https://user-images.githubusercontent.com/33183783/66275770-c14b4f80-e840-11e9-8ce6-07d32451ec95.jpg)
+Technology stack: 
+
+•	Software Technologies: Android Studio, Java, Raspbian OS, Kotlin, MySQL, AWS EC2
+•	Hardware Technologies: Raspberry Pi, Webcam, Servomotor SG90, Sound Sensor, Jumper Cables.
