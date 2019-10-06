@@ -16,5 +16,7 @@ Architecture Diagram:
 ![272 ac dia](https://user-images.githubusercontent.com/33183783/66275770-c14b4f80-e840-11e9-8ce6-07d32451ec95.jpg)
 Technology stack: 
 
-•	Software Technologies: Android Studio, Java, Raspbian OS, Kotlin, MySQL, AWS EC2
+•	Software Technologies: Android Studio, Java, Raspbian OS, Kotlin, M   ySQL, AWS EC2
+
+
 •	Hardware Technologies: Raspberry Pi, Webcam, Servomotor SG90, Sound Sensor, Jumper Cables.
