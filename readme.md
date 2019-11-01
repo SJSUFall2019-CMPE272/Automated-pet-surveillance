@@ -27,3 +27,9 @@ MCP3008 ADC : This will convert the analog sound signals to digital signals whic
 BreadBoard : This will be used to connect Electret Microphone Amplifier - MAX4466 (sound sensor) with Raspberry Pi.
 
 SG90 Servo Motor : This will be used to dispatch the food for the pet and will be controlled by centralized Raspberry Pi.
+
+## Empathy mapping
+### User : Paula
+  (A web developer and pet owner who works part time at client location.)
+![Empathy mapping](https://user-images.githubusercontent.com/31982121/68059193-c1603300-fcb8-11e9-9837-e5f06fd8c285.jpg)
+
