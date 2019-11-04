@@ -33,3 +33,10 @@ SG90 Servo Motor : This will be used to dispatch the food for the pet and will b
   (A web developer and pet owner who works part time at client location.)
 ![Empathy mapping](https://user-images.githubusercontent.com/31982121/68059193-c1603300-fcb8-11e9-9837-e5f06fd8c285.jpg)
 
+## Hill Statements:
+Hill statement is used to describe a specific functionality user is trying to achieve by answering 3 main questions: Who, What and Wow.
+### Project hill statement:
+A pet owner using an automated surveillance system will be able to monitor the pet present in the range of cameras and feed them without being present at the same location as the pet.
+
+An owner will be able alerted by the system in case of any unusual behavior expressed by his/her pet eliminating the need of constant monitoring through cameras.
+
