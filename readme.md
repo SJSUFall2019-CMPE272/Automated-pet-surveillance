@@ -28,7 +28,8 @@ BreadBoard : This will be used to connect Electret Microphone Amplifier - MAX446
 
 SG90 Servo Motor : This will be used to dispatch the food for the pet and will be controlled by centralized Raspberry Pi.
 
-## User : Paula (A web developer and pet owner who works part time at client location.)
+## User : Paula 
+### (A web developer and pet owner who works part time at client location.)
 ### Summary :
 Paula is a freelance web developer who works remotely and visits client sites occasionally. She’s responsible for requirements gathering, UI design, and final web development. She helps in the conversion of user’s requirements into a functioning user interface with the help of different front end technologies.
 Along with being a freelancer, Paula also owns a dog. As she needs to visit the client site occasionally, taking care of her pet becomes a bit challenging. To solve this problem at hand, she needs a cheap and effective solution which gives her the freedom to monitor and feed her pet from any location.
