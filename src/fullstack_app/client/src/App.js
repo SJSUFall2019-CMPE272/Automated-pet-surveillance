@@ -2,16 +2,23 @@ import React, { Component } from 'react';
 import axios from 'axios';
 
 class App extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      data: [],
+      id: 0,
+      username: null,
+      password: null,
+      intervalIsSet: false,
+      idToDelete: null,
+      idToUpdate: null,
+      objectToUpdate: null,
+    };
+    this.putDataToDB = this.putDataToDB.bind(this);
+  }
+  
   // initialize our state
-  state = {
-    data: [],
-    id: 0,
-    message: null,
-    intervalIsSet: false,
-    idToDelete: null,
-    idToUpdate: null,
-    objectToUpdate: null,
-  };
+ 
 
   // when component mounts, first thing it does is fetch all existing data in our db
   // then we incorporate a polling logic so that we can easily see if our db has
@@ -48,16 +55,20 @@ class App extends Component {
 
   // our put method that uses our backend api
   // to create new query into our data base
-  putDataToDB = (message) => {
+  putDataToDB = (username, password) => {
     let currentIds = this.state.data.map((data) => data.id);
     let idToBeAdded = 0;
+    debugger;
+    console.log(username);
+    console.log(password);
     while (currentIds.includes(idToBeAdded)) {
       ++idToBeAdded;
     }
 
     axios.post('http://localhost:3001/api/putData', {
       id: idToBeAdded,
-      message: message,
+      username: username,
+      password: password,
     });
   };
 
@@ -92,7 +103,7 @@ class App extends Component {
 
     axios.post('http://localhost:3001/api/updateData', {
       id: objIdToUpdate,
-      update: { message: updateToApply },
+      update: { message: updateToApply }
     });
   };
 
@@ -107,21 +118,29 @@ class App extends Component {
           {data.length <= 0
             ? 'NO DB ENTRIES YET'
             : data.map((dat) => (
-                <li style={{ padding: '10px' }} key={data.message}>
+                <li style={{ padding: '10px' }} key={data.id}>
                   <span style={{ color: 'gray' }}> id: </span> {dat.id} <br />
-                  <span style={{ color: 'gray' }}> data: </span>
-                  {dat.message}
+                  <span style={{ color: 'gray' }}> data username: </span>
+                  {dat.username}
+                  <span style={{ color: 'gray' }}> data password: </span>
+                  {dat.password}
                 </li>
               ))}
         </ul>
         <div style={{ padding: '10px' }}>
           <input
             type="text"
-            onChange={(e) => this.setState({ message: e.target.value })}
-            placeholder="add something in the database"
+            onChange={(e) => this.setState({ username: e.target.value })}
+            placeholder="add username in the database"
             style={{ width: '200px' }}
           />
-          <button onClick={() => this.putDataToDB(this.state.message)}>
+          <input
+            type="text"
+            onChange={(e) => this.setState({ password: e.target.value })}
+            placeholder="add password in the database"
+            style={{ width: '200px' }}
+          />
+          <button onClick= {() => this.putDataToDB(this.state.username, this.state.password)}>
             ADD
           </button>
         </div>

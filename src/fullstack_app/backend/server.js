@@ -65,17 +65,19 @@ router.delete('/deleteData', (req, res) => {
 // this method adds new data in our database
 router.post('/putData', (req, res) => {
   let data = new Data();
-
-  const { id, message } = req.body;
-
-  if ((!id && id !== 0) || !message) {
+  debugger;
+  const { id, username, password } = req.body;
+  console.log(id, username, password );
+  if ((!id && id != 0) || username==null || password==null) {
     return res.json({
       success: false,
       error: 'INVALID INPUTS',
     });
   }
-  data.message = message;
+  data.username = username;
+  data.password = password;
   data.id = id;
+  // console.log(res);
   data.save((err) => {
     if (err) return res.json({ success: false, error: err });
     return res.json({ success: true });
@@ -87,3 +89,4 @@ app.use('/api', router);
 
 // launch our backend into a port
 app.listen(API_PORT, () => console.log(`LISTENING ON PORT ${API_PORT}`));
+
