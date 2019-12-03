@@ -1,9 +1,9 @@
 import smtplib
-gmail_user = ''
-gmail_password = ''
+gmail_user = 'Pawpatrolserviceshelpdesk@gmail.com'
+gmail_password = 'Cmpe272Ranjan'
 
 sent_from = gmail_user
-to = ['']
+to = ['atharvamunshi19@gmail.com']
 subject = 'OMG Super Important Message'
 # body = 'Hey, what's up?\n\n- You'
 
