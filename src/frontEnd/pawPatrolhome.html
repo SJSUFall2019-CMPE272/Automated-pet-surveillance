@@ -22,6 +22,8 @@
 
   <!-- Theme CSS - Includes Bootstrap -->
   <link href="css\creative.css" rel="stylesheet">
+  <script src="js/lineChart.js"></script>
+
 </head>
 
 <body id="page-top">
@@ -30,14 +32,14 @@
   <section>
   <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
     <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top" style="font-family:Comic Sans MS">PawPatrol</a>
+      <a class="navbar-brand js-scroll-trigger" href="pawPatrolhome.html" style="font-family:Comic Sans MS">PawPatrol</a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto my-2 my-lg-0">
           <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="https://controlling-finch-4951.dataplicity.io/servo" >Feed</a>
+          <a class="nav-link js-scroll-trigger" onClick=incrementFeedCount();>Feed</a>
         <li class="nav-item">
           <a class="nav-link js-scroll-trigger" href="analytics.html">Analytics</a>
         </li>
@@ -63,6 +65,10 @@
 
     <div class="w3-container">
       <h3>Your Dog says thanks!</h3>
+      <h3> Feed count :
+        <script type="text/javascript">
+        document.write(window.feedCount)
+      </script> </h3>
     </div>
 
   </div>
@@ -79,7 +85,9 @@
       <div col-lg-8 align-self-baseline>
         <center>
 
-        <a  class="btn btn-light btn-xl js-scroll-trigger" href="https://controlling-finch-4951.dataplicity.io/servo">Feed!</a>
+        <a  class="btn btn-light btn-xl js-scroll-trigger" id="countButton" onClick=incrementFeedCount();>Feed!</a>
+
+         <script> document.getElementById("displayCount").innerHTML =   localStorage.getItem("feedCount"); </script>
         <a class="btn btn-light btn-xl js-scroll-trigger" href="analytics.html">Daily Report</a>
     </div>
  </div>
@@ -95,6 +103,7 @@
 
   <!-- Custom scripts for this template -->
   <script src="js/creative.min.js"></script>
+
 </header>
 
 
