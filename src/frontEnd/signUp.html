@@ -207,14 +207,14 @@
 	<script>
 		function storeFunction() {
 			alert('hi')
-			var queryString = JSON.stringify(jQuery('#myForm').serializeArray());
+			var queryString = JSON.parse(JSON.stringify(jQuery('#myForm').serializeArray()));
 			localStorage.setItem()
 
 			for (let index = 0; index < queryString.length; index++) {
 				localStorage.setItem(queryString[index].name, queryString[index].value);
 				alert('Signed Up Successfully');
 
-				window.location.href = "http://localhost:3001/Login.html";
+				window.location.href = "Login.html";
 			}
 		}
 	</script>
