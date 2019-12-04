@@ -1,8 +1,32 @@
+var feedCount;
+var totalMeals;
+function incrementFeedCount()
+{
+var feedCounter = Number(localStorage.getItem("feedCount"));
+var mealsCounter = Number(localStorage.getItem("totalMeals" ));
+if(feedCounter==null)
+{
+  feedCounter = 0;
+}
+if(mealsCounter == null)
+{
+  mealsCounter = 4;
+}
+feedCounter++;
+mealsCounter++;
+  localStorage.setItem("feedCount", feedCounter);
+  localStorage.setItem("totalMeals", mealsCounter);
+
+}
+
+
+
 // x-axis
+
 var day = ["Sun", "Mon", "Tue", "Wed", "Thurs","Fri", "Sat"];
 // data for drawing
 var notificationCount = [1,0,2,2,3,2,1];
-var manualFeedFrequency = [1,2,0,0,0,1,2]
+var manualFeedFrequency = [1,2,0,localStorage.getItem("feedCount"),0,1,2]
 //creating a graph
 var ctx = document.getElementById("lineChart");
 var lineChart = new Chart(ctx, {
@@ -30,8 +54,8 @@ var lineChart = new Chart(ctx, {
             yAxes: [{
                 ticks: {
                     beginAtZero: true,
-                    stepSize: 1,
-                    max:4
+                    stepSize: 1
+
                 }
             }]
         }
