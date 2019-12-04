@@ -8,9 +8,9 @@
   <meta name="description" content="">
   <meta name="author" content="">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.min.js"></script>
-     <link href="css\startmin.css" rel="stylesheet">
-    <link href="css\font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link href="css\startmin.css" rel="stylesheet">
+  <link href="css\font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <title>Automatic Pet Surveillance</title>
 
   <!-- Font Awesome Icons -->
@@ -19,7 +19,8 @@
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet">
-  <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic'
+    rel='stylesheet' type='text/css'>
 
   <!-- Plugin CSS -->
   <link href="vendor\magnific-popup\magnific-popup.css" rel="stylesheet">
@@ -33,135 +34,138 @@
 
   <!-- Navigation -->
   <section>
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
-    <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="pawPatrolhome.html" style="font-family:Comic Sans MS; color:rgb(0,0,0);">PawPatrol</a>
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto my-2 my-lg-0">
-          <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href=#Feed style="color:rgb(0,0,0);"  onClick=incrementFeedCount();>Feed</a>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#about" style="color:rgb(0,0,0);">Analytics</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="index.html" style="color:rgb(0,0,0);">Sign Out</a>
-        </li>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="pawPatrolhome.html"
+          style="font-family:Comic Sans MS; color:rgb(0,0,0);">PawPatrol</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+          data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto my-2 my-lg-0">
+            <li class="nav-item">
+
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#about" style="color:rgb(0,0,0);">Analytics</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="index.html" style="color:rgb(0,0,0);">Sign Out</a>
+            </li>
 
 
-        </ul>
-      </div>
-    </div>
-  </nav>
-</section>
-
-<div id="id01" class="w3-modal">
-  <div class="w3-modal-content w3-animate-zoom">
-
-    <header class="w3-container w3-orange">
-      <span onclick="document.getElementById('id01').style.display='none'"
-      class="w3-button w3-display-topright">&times;</span>
-      <h2 style="font-family:Comic Sans MS;">Success!</h2>
-    </header>
-
-    <div class="w3-container">
-      <h3 style="font-family:Comic Sans MS;">Your Dog says thanks!</h3>
-    </div>
-
-  </div>
-</div>
-  <section class="page-section bg-light" id="about">
-<div id="wrapper">
-            <div class="page wrapper">
-                <div class="container-fluid">
-                    <div class="row">
-
-                        <!-- /.col-lg-12 -->
-                    </div>
-                    <!-- /.row -->
-                    <div class="row">
-                        <div class="col-lg-3 col-md-6">
-                            <div class="panel panel-primary">
-                                <div class="panel-heading">
-                                    <div class="row">
-                                        <div class="col-xs-3">
-                                            <i class="fa fa-comments fa-5x"></i>
-                                        </div>
-                                        <div class="col-xs-9 text-right">
-                                            <div class="huge">3</div>
-                                            <div>Notifications </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6">
-                            <div class="panel panel-green">
-                                <div class="panel-heading">
-                                    <div class="row">
-                                        <div class="col-xs-3">
-                                            <i class="fa fa-support fa-5x"></i>
-                                        </div>
-                                        <div class="col-xs-9 text-right">
-                                            <div class="huge" >
-                                              <span id="displayCountAnalytics">0</span>
-                                              </div>
-                                               <script> document.getElementById("displayCountAnalytics").innerHTML =   localStorage.getItem("feedCount"); </script>
-                                            <div>Manual Treats </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6">
-                            <div class="panel panel-green">
-                                <div class="panel-heading">
-                                    <div class="row">
-                                        <div class="col-xs-3">
-                                            <i class="fa fa-support fa-5x"></i>
-                                        </div>
-                                        <div class="col-xs-9 text-right">
-                                            <div class="huge">
-                                                <span id="displayMealsAnalytics">4</span></div>
-                                            <div>Total meals</div>
-                                             <script> document.getElementById("displayMealsAnalytics").innerHTML = localStorage.getItem("totalMeals"); </script>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6">
-                            <div class="panel panel-primary">
-                                <div class="panel-heading">
-                                    <div class="row">
-                                        <div class="col-xs-3">
-                                            <i class="fa fa-clock-o fa-5x"></i>
-                                        </div>
-                                        <div class="col-xs-9 text-right">
-                                            <div class="huge">6 Hr</div>
-                                            <div>Meal interval time</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-  <!-- Masthead -->
-
-    <div class="container bg-light">
-      <div class="row justify-content-center">
-        <div class="col-lg-8 text-center">
-          <h1 text-uppercase text-white font-weight-bold>Notification frequency per week</h1>
-
-
-     <canvas id="lineChart" width="1600" height="900"></canvas>
+          </ul>
         </div>
       </div>
+    </nav>
+  </section>
+
+  <div id="id01" class="w3-modal">
+    <div class="w3-modal-content w3-animate-zoom">
+
+      <header class="w3-container w3-orange">
+        <span onclick="document.getElementById('id01').style.display='none'"
+          class="w3-button w3-display-topright">&times;</span>
+        <h2 style="font-family:Comic Sans MS;">Success!</h2>
+      </header>
+
+      <div class="w3-container">
+        <h3 style="font-family:Comic Sans MS;">Your Dog says thanks!</h3>
+      </div>
+
     </div>
+  </div>
+  <section class="page-section bg-light" id="about">
+    <div id="wrapper">
+      <div class="page wrapper">
+        <div class="container-fluid">
+          <div class="row">
+
+            <!-- /.col-lg-12 -->
+          </div>
+          <!-- /.row -->
+          <div class="row">
+            <div class="col-lg-3 col-md-6">
+              <div class="panel panel-primary">
+                <div class="panel-heading">
+                  <div class="row">
+                    <div class="col-xs-3">
+                      <i class="fa fa-comments fa-5x"></i>
+                    </div>
+                    <div class="col-xs-9 text-right">
+                      <div class="huge">3</div>
+                      <div>Notifications </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="panel panel-green">
+                <div class="panel-heading">
+                  <div class="row">
+                    <div class="col-xs-3">
+                      <i class="fa fa-support fa-5x"></i>
+                    </div>
+                    <div class="col-xs-9 text-right">
+                      <div class="huge">
+                        <span id="displayCountAnalytics">0</span>
+                      </div>
+                      <script> document.getElementById("displayCountAnalytics").innerHTML = localStorage.getItem("feedCount"); </script>
+                      <div>Manual Treats </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="panel panel-green">
+                <div class="panel-heading">
+                  <div class="row">
+                    <div class="col-xs-3">
+                      <i class="fa fa-support fa-5x"></i>
+                    </div>
+                    <div class="col-xs-9 text-right">
+                      <div class="huge">
+                        <span id="displayMealsAnalytics">4</span></div>
+                      <div>Total meals</div>
+                      <script> document.getElementById("displayMealsAnalytics").innerHTML = localStorage.getItem("totalMeals"); </script>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="panel panel-primary">
+                <div class="panel-heading">
+                  <div class="row">
+                    <div class="col-xs-3">
+                      <i class="fa fa-clock-o fa-5x"></i>
+                    </div>
+                    <div class="col-xs-9 text-right">
+                      <div class="huge">6 Hr</div>
+                      <div>Meal interval time</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Masthead -->
+
+          <div class="container bg-light">
+            <div class="row justify-content-center">
+              <div class="col-lg-8 text-center">
+                <h1 text-uppercase text-white font-weight-bold>Notification frequency per week</h1>
+
+
+                <canvas id="lineChart" width="1600" height="900"></canvas>
+              </div>
+            </div>
+          </div>
   </section>
 
   <!-- Bootstrap core JavaScript -->
@@ -175,7 +179,7 @@
   <!-- Custom scripts for this template -->
   <script src="js/creative.min.js"></script>
 
-    <script src="js/lineChart.js"></script>
+  <script src="js/lineChart.js"></script>
 
 </body>
 

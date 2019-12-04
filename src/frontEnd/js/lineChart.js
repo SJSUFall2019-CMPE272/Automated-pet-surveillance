@@ -1,32 +1,29 @@
 var feedCount;
 var totalMeals;
-function incrementFeedCount()
-{
-var feedCounter = Number(localStorage.getItem("feedCount"));
-var mealsCounter = Number(localStorage.getItem("totalMeals" ));
-if(feedCounter==null)
-{
-  feedCounter = 0;
-}
-if(mealsCounter == null)
-{
-  mealsCounter = 4;
-}
-feedCounter++;
-mealsCounter++;
+function incrementFeedCount() {
+  var feedCounter = Number(localStorage.getItem("feedCount"));
+  var mealsCounter = Number(localStorage.getItem("totalMeals"));
+  if (feedCounter == null) {
+    feedCounter = 0;
+  }
+  if (mealsCounter == null) {
+    mealsCounter = 4;
+  }
+  feedCounter++;
+  mealsCounter++;
   localStorage.setItem("feedCount", feedCounter);
   localStorage.setItem("totalMeals", mealsCounter);
-
+  window.location.href = "http://localhost:3001/analytics.html";
 }
 
 
 
 // x-axis
 
-var day = ["Sun", "Mon", "Tue", "Wed", "Thurs","Fri", "Sat"];
+var day = ["Sun", "Mon", "Tue", "Wed", "Thurs", "Fri", "Sat"];
 // data for drawing
-var notificationCount = [1,0,2,2,3,2,1];
-var manualFeedFrequency = [1,2,0,localStorage.getItem("feedCount"),0,1,2]
+var notificationCount = [1, 0, 2, 2, 3, 2, 1];
+var manualFeedFrequency = [1, 2, 0, localStorage.getItem("feedCount"), 0, 1, 2]
 //creating a graph
 var ctx = document.getElementById("lineChart");
 var lineChart = new Chart(ctx, {
@@ -50,14 +47,14 @@ var lineChart = new Chart(ctx, {
 
   },
   options: {
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero: true,
-                    stepSize: 1
+    scales: {
+      yAxes: [{
+        ticks: {
+          beginAtZero: true,
+          stepSize: 1
 
-                }
-            }]
         }
+      }]
     }
+  }
 });
