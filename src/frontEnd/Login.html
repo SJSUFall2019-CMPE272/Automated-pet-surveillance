@@ -178,9 +178,11 @@
 			var username = localStorage.getItem('username');
 			var password = localStorage.getItem('password');
 
-			if (queryString[0].value == username && queryString[1].value == password)
+			if (queryString[0].value == username && queryString[1].value == password){
+			
 				alert('success');
-
+				window.location.href = "http://localhost:3000/pawPatrolhome.html";	
+			}	
 			else
 				alert('wrong credentials');
 

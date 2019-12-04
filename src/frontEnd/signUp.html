@@ -218,6 +218,8 @@
 			var queryString = JSON.parse(JSON.stringify(jQuery('#myForm').serializeArray()));
 			for (let index = 0; index < queryString.length; index++) {
 				localStorage.setItem(queryString[index].name, queryString[index].value);
+				alert('Signed Up Successfully');
+				window.location.href = "http://localhost:3000/Login.html";
 			}
 		}
 	</script>
