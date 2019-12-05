@@ -206,16 +206,26 @@
 
 	<script>
 		function storeFunction() {
-			alert('hi')
+
 			var queryString = JSON.parse(JSON.stringify(jQuery('#myForm').serializeArray()));
-			localStorage.setItem()
 
 			for (let index = 0; index < queryString.length; index++) {
 				localStorage.setItem(queryString[index].name, queryString[index].value);
-				alert('Signed Up Successfully');
 
-				window.location.href = "Login.html";
 			}
+			alert('Signed Up Successfully');
+			window.location.href = "Login.html";
+			// $.ajax({
+			// 	url: "https://controlling-finch-4951.dataplicity.io/" + "dummy",
+			// 	method: "POST",
+			// 	success: function (res) {
+			// 		console.log(res);
+			// 		alert('Signed Up Successfully');
+			// 		window.location.href = "Login.html";
+			// 	}
+
+			// });
+
 		}
 	</script>
 </body>
