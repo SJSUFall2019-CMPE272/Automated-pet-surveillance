@@ -13,7 +13,7 @@ function incrementFeedCount() {
   mealsCounter++;
   localStorage.setItem("feedCount", feedCounter);
   localStorage.setItem("totalMeals", mealsCounter);
-  window.location.href = "http://localhost:3001/analytics.html";
+  window.location.href = "analytics.html";
 }
 
 
