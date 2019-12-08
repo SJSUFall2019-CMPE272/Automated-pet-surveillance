@@ -1,6 +1,4 @@
-## Project Proposal #1
-
-# Automated Pet Surveillance
+## Automated Pet Surveillance
 
 Atharva Munshi        
 Kapil Mulchandani  	    
